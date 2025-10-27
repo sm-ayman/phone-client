@@ -19,7 +19,7 @@ const Phones = () => {
             <img
               src={phone.image}
               alt={phone.name}
-              className="w-full h-72 object-fit"
+              className="w-full h-72 object-contain"
             />
 
             <div className="p-5">
