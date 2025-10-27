@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Phones from "./components/Phones.jsx";
+import Phone from "./components/Phone.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "/phones",
         element: <Phones></Phones>,
         loader: () => fetch("http://localhost:5000/phones"),
+      },
+      {
+        path: "/phones/:id",
+        element: <Phone></Phone>,
       },
     ],
   },
